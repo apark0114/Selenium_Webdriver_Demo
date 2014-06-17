@@ -18,6 +18,10 @@ public class leaveManyComments extends BaseTest{
 		super(user);
 	}
 	
+	/**
+	 * This test verifies that all comments submitted are live(exisits) on the website.
+	 * If collectCommentNotFoundOnSite returns a value that is not empty, then this test fails.
+	 */
 	@Test
 	public void test(){
 		HomePage homepage = simpleLogin();
@@ -33,6 +37,12 @@ public class leaveManyComments extends BaseTest{
 		
 	}
 	
+	
+	/**
+	 * This method leaves 5 comments in sequence each containing a unique value.
+	 * @param homepage
+	 * @return comment list.
+	 */
 	public List<String> leaveFiveComments(HomePage homepage){
 		List<String> liveCommentList = new ArrayList<String>();
 		for(int i=0; i<5; i++){
@@ -43,6 +53,13 @@ public class leaveManyComments extends BaseTest{
 		return liveCommentList;
 	}
 	
+	/**
+	 * This method collects five live comments after the post, then compare with the comments that are submitted.
+	 * If live comments list doesn't match with the submitted comment list, then returns the StringBuilder object of these comments.
+	 * @param liveCommentList
+	 * @param liveWebElementList
+	 * @return commment list that are not submitted correctly.
+	 */
 	public StringBuilder collectCommentNotFoundOnSite(List<String> liveCommentList, List<WebElement> liveWebElementList){
 		StringBuilder sb = new StringBuilder();
 		for(String singleComment: liveCommentList){
