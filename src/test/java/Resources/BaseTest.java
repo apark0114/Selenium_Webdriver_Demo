@@ -111,7 +111,7 @@ public class BaseTest {
 	 * @param methodName
 	 * @throws IOException
 	 * 
-	 * Images are saved in jenkins' friendly format.  Each screenshot is name after the test method.
+	 * Images are saved in jenkins' friendly format.  Each screenshot is named after its test method.
 	 */
 	@Ignore
 	public void takeScreenshot(String testName, String methodName) throws IOException {
