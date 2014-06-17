@@ -4,6 +4,6 @@ This Java project contains a partial Selenium testing framework which tests comp
 Test is executed using Maven + Jenkins.
 
 As you can see, the web navigation logic is separated from the test itself to reduce the boilerplate code.
-This way, the test is neatly organized and easy to maintain.
+This way, tests are neatly organized and easy to maintain.
 
-Google recommands to maintain selenium tests this way which is also known as Page Object Pattern.
+Google recommands to follow this pattern which is also known as Page Object Pattern.
