@@ -27,16 +27,8 @@ public class deleteOneComment extends BaseTest{
 		String comment = "comment at : " + System.currentTimeMillis();
 		
 		homepage.leaveAComment(comment);
-		
-		try {
-			Thread.sleep(1500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+			
 		homepage.deleteFirstComment();
-		
 		
 		assertFalse("comment was : " + homepage.getFirstComment(),homepage.getFirstComment().equals(comment));
 	}
