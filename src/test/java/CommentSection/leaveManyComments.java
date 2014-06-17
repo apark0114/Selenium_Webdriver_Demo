@@ -39,13 +39,6 @@ public class leaveManyComments extends BaseTest{
 			String comment = "Many comments at: " + System.currentTimeMillis();
 			homepage.leaveAComment(comment);
 			liveCommentList.add(comment);
-			
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		return liveCommentList;
 	}
