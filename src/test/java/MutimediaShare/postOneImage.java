@@ -36,7 +36,6 @@ public class postOneImage extends BaseTest{
 		
 		String valueAfter = sharePage.getFirstSharedFile().getAttribute("id");
 		//System.out.println(sharePage.getFirstSharedFile().getAttribute("class")+ "  /  " + sharePage.getFirstSharedFile().getAttribute("onmousemove"));
-		
 		//System.out.println(valueBefore + "\n" + valueAfter);
 		assertFalse("Image uploaded incorrectly on site\nvalueBefore: " + valueBefore + 
 				"/ valueAfter: " +valueAfter, (valueBefore ==valueAfter) && (valueBefore != null || valueAfter != null));
