@@ -26,10 +26,10 @@ public class postOneVideo extends BaseTest{
 		String beforePost = sharePage.getFirstSharedFile().getAttribute("id");
 		sharePage.uploadVideo(getHumanFile("mp4.mp4"));
 		
-		driver.navigate().refresh();
+		sharePage.refresh();
 		
 		String afterPost = sharePage.getFirstSharedFile().getAttribute("id");
-		System.out.println(beforePost + " \nafter: " +afterPost);
+		//System.out.println(beforePost + " \nafter: " +afterPost);
 		assertTrue(beforePost != afterPost);
 	}
 }
