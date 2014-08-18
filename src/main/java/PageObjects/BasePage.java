@@ -12,18 +12,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+/**
+ * This is a foundation class for other pages that contains common methods that can be used in other page object class.
+ * @author Albert Park
+ *
+ */
 public class BasePage {
 	protected WebDriver driver;
 	public BasePage(WebDriver driver){
 		this.driver = driver;
 	}
 	
+	/**
+	 * IFrame element to focus into content frame.
+	 */
 	@FindBy(name="topic")
 	WebElement topicFrame;
 	
 	/**
-	 * Switches to iframe "topic".
+	 * Switches to iframe "topic" returns BasePage object.
 	 * @return  BasePage Object.
 	 */
 	public BasePage switchToTopic(){
@@ -74,7 +81,7 @@ public class BasePage {
 	}
 	
 	/**
-	 * Implicit wait for an element to go invisible.  Default wait is 10 seconds.
+	 * Implicit wait for an element to be invisible.  Default wait is 10 seconds.
 	 * @param path
 	 */
 	public void waitUntilNot(By path){
