@@ -20,7 +20,7 @@ public class leaveOneCommentTest extends BaseTest{
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		HomePage homepage = loginPage.loginAs(user.getUserName(), user.getPassword());
 		
-		String comment = "Hello pulse world!";
+		String comment = "Hello pulse world!"; 
 		homepage.leaveAComment(comment);
 		
 		assertTrue("comment is not submitted correctly", homepage.getFirstComment().equals(comment));
