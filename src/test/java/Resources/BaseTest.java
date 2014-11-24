@@ -81,7 +81,6 @@ public class BaseTest {
 		System.out.println("--------------------------------------------------------------------");
 
 		driver= new FirefoxDriver();
-		//driver.get("http://rnd.madcapsoftware.com/apark/pulse/Test1/Default.htm");
 
 		driver.get("https://someWebsite/myCompanyTests/");
 		
