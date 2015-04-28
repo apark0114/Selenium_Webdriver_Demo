@@ -24,9 +24,12 @@ public class loginToCommunity extends BaseTest{
 	 */
 	@Test
 	public void LoginTest(){
+		//reference to LoginPage object.
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		
+		//login to page by pass username and password.
 		HomePage homepage = loginPage.loginAs(user.getUserName(), user.getPassword());
+		//if the page correctly loads, the title should be "Welcome". Otherwise, login was not successful.
 		assertEquals("Welcome", homepage.getTitle());
 	}
 	
