@@ -1,5 +1,5 @@
-MyWorkspace
-===========
+Selenium Webdriver Social Media Demo
+
 This Java project contains a partial Selenium testing framework which tests company's social media site.
 Test is executed using Maven + Jenkins.
 
