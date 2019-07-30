@@ -1,4 +1,5 @@
-# Selenium Webdriver Social Media Demo
+# Selenium Webdriver Social Media App Demo
+### Selnium Web UI Tests
 
 This Java project contains a partial Selenium testing framework which tests company's social media site.
 Test is executed using Maven + Jenkins.
